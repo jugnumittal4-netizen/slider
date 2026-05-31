@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <section>
+            <h1>corrosoul</h1>
+            <img class = "myslides" src = "1.jpeg" style = "height:auto;">
+            <img class = "myslides" src = "2.jpeg" style = "height:auto;">
+            <img class = "myslides" src = "3.jpeg" style = "height:auto;">
+            <img class = "myslides" src = "4.jpeg" style = "height:auto;">
+            <img class = "myslides" src = "5.jpeg" style = "height:auto;">
+        </section>
+        <script>
+            //++ means incrementing the value of myindex by 1
+            var myindex = 0;
+            corousel();
+            function corousel(){
+                var i;
+                var x = document.getElementsByClassName("myslides");
+                for(i=0; i<x.length; i++){
+                    x[i].style.display = "none";
+                }
+                myindex++;
+                if(myindex > x.length){
+                    myindex = 1
+                }
+                x[myindex-1].style.display = "block";
+                setTimeout(corousel, 3000);
+            }
+            </script>
+    </body>
+</html>
